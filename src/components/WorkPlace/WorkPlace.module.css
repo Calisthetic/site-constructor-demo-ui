@@ -1,0 +1,7 @@
+.background {
+  width: 100%;
+  height: auto;
+  overflow-y: auto !important;
+  overflow-x: auto;
+  position: relative;
+}
