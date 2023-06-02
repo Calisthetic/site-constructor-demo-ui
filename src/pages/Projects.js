@@ -1,23 +1,34 @@
-import s from "./Pages.module.css";
+import { useRef, useState } from "react";
+import s from "./Projects.module.css";
 
 const Projects = () => {
+  const [addOpen, setAddOpen] = useState(false);
+
+  const addProjectButton = useRef();
+  const addProjectField = useRef();
+
   function selectProject() {
     window.location.href = "/main";
   }
   function addProject() {
-    document.getElementById("AddProjectField").style.width === "0px"
-      ? (document.getElementById("AddProjectField").style.width = "200px")
-      : (document.getElementById("AddProjectField").style.width = "0px");
-    document.getElementById("AddProjectField").style.marginLeft === "0px"
-      ? (document.getElementById("AddProjectField").style.marginLeft = "20px")
-      : (document.getElementById("AddProjectField").style.marginLeft = "0px");
+    if (!addOpen) {
+      addProjectField.current.style.width = "214px";
+      addProjectField.current.style.marginLeft = "20px";
+      addProjectButton.current.style.transform = "rotate(45deg)";
+      setAddOpen(!addOpen);
+    } else {
+      addProjectField.current.style.width = "0px";
+      addProjectField.current.style.marginLeft = "0px";
+      addProjectButton.current.style.transform = "rotate(0deg)";
+      setAddOpen(!addOpen);
+    }
   }
 
   return (
     <div className={s.background_projects}>
       <div className={s.projects_field}>
         <div className={s.cages_back}>
-          <div title="Click to edit your project" className={s.titlecage}>
+          <div title="Click to edit your project" className={s.cage_title}>
             ВАШИ ПРОЕКТЫ
           </div>
           <div className={s.cages}>
@@ -53,9 +64,24 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div id="AddProjectField" className={s.add_project}></div>
+        <div ref={addProjectField} className={s.add_project}>
+          <div className={s.add_title}>Новый проект</div>
+          <input
+            maxLength="32"
+            placeholder="название проекта"
+            type="text"
+            className={s.add_input_name}
+          ></input>
+          <div className={s.add_button_back}>
+            <div className={s.add_button}>Создать</div>
+          </div>
+        </div>
       </div>
-      <div className={s.add_button} onClick={addProject}>
+      <div
+        className={s.add_open_button}
+        ref={addProjectButton}
+        onClick={addProject}
+      >
         +
       </div>
     </div>

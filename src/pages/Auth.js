@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import s from "./Pages.module.css";
+import s from "./Auth.module.css";
 
 const Auth = () => {
   const textLoginRef = useRef();
