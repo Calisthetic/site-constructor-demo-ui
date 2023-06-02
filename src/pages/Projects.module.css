@@ -107,8 +107,7 @@
   transform: rotate(0deg);
 }
 .add_open_button:hover {
-  border: 2px solid lightgreen;
-  color: lime;
+  border: 2px solid red;
 }
 
 .add_project {
@@ -132,27 +131,28 @@
 }
 .add_input_name {
   font-size: 20px;
-  width: calc(100% - 8px);
+  width: calc(100% - 10px);
   margin-top: 2px;
   height: 32px;
 }
-.add_button_back {
-  padding: 2px;
-  background-color: red;
-  width: calc(100% - 4px);
-  text-align: center;
-  display: flex;
-  align-items: center;
-}
+
 .add_button {
-  width: 210px;
+  width: calc(100% - 6px);
   display: flex;
   align-items: center;
-  height: 38px;
+  justify-content: center;
+  height: 40px;
   background-color: #303339;
   cursor: pointer;
   color: white;
   font-size: 24px;
   font-family: sans-serif;
   text-align: center;
+  user-select: none;
+  transition: 0.25s ease;
+  border: 2px solid red;
+  outline: 2px solid red;
+}
+.add_button:hover {
+  outline: 2px solid red;
 }

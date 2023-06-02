@@ -13,12 +13,14 @@ const Projects = () => {
   function addProject() {
     if (!addOpen) {
       addProjectField.current.style.width = "214px";
-      addProjectField.current.style.marginLeft = "20px";
-      addProjectButton.current.style.transform = "rotate(45deg)";
+      addProjectField.current.style.marginLeft = "30px";
+      addProjectButton.current.textContent = "−";
+      addProjectButton.current.style.transform = "rotate(180deg)";
       setAddOpen(!addOpen);
     } else {
       addProjectField.current.style.width = "0px";
       addProjectField.current.style.marginLeft = "0px";
+      addProjectButton.current.textContent = "+";
       addProjectButton.current.style.transform = "rotate(0deg)";
       setAddOpen(!addOpen);
     }
@@ -65,16 +67,14 @@ const Projects = () => {
           </div>
         </div>
         <div ref={addProjectField} className={s.add_project}>
-          <div className={s.add_title}>Новый проект</div>
+          <div className={s.add_title}>НОВЫЙ ПРОЕКТ</div>
           <input
             maxLength="32"
             placeholder="название проекта"
             type="text"
             className={s.add_input_name}
           ></input>
-          <div className={s.add_button_back}>
-            <div className={s.add_button}>Создать</div>
-          </div>
+          <div className={s.add_button}>Создать</div>
         </div>
       </div>
       <div
