@@ -73,6 +73,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   padding-right: 2px;
+  font-family: sans-serif;
 }
 .cage_blocks_count {
   color: white;
@@ -88,6 +89,7 @@
   transition: 0.25s ease;
   white-space: nowrap;
   overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* //////////////// */
