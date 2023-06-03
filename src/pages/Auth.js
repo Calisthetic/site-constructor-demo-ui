@@ -25,14 +25,14 @@ const Auth = () => {
           defaultValue="user1"
           ref={textLoginRef}
           placeholder="login or name"
-          className={s.input}
+          className={s.input_text}
         ></input>
         <input
           type="text"
           defaultValue="pass1"
           ref={textPasswordRef}
           placeholder="password"
-          className={s.input}
+          className={s.input_text}
         ></input>
         <div onClick={Entry} className={s.button}>
           Entry
