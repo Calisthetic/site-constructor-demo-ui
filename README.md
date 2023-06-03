@@ -1,2 +1,2 @@
 # site-constructor-demo-ui
-Created with CodeSandbox
+Created with CodeSandbox for team development
