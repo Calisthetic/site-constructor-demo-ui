@@ -19,7 +19,7 @@ const Auth = () => {
   return (
     <div className={s.background_auth}>
       <div className={s.field_back}>
-        <div className={s.title}>Авторизация</div>
+        <div className={s.title}>Welcome back!</div>
         <input
           type="text"
           defaultValue="user1"

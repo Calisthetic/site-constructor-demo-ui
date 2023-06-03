@@ -12,57 +12,62 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
   padding: 30px;
 
-  background-color: black;
-  border: 2px solid red;
+  /* background-color: black;
+  border: 2px solid red; */
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   position: relative;
 }
 .title {
   margin-bottom: 5px;
-  color: red;
+  color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 26px;
+  font-family: sans-serif;
 }
 .input_text {
-  font-size: 20px;
-  height: 30px;
+  font-size: 16px;
+  height: 24px;
   margin: 0px 0px 12px 0px;
   color: white;
   border-radius: 3px;
   border: 3px black;
   border: 2px solid rgba(0, 0, 0, 0);
   border-top: 2px solid rgba(0, 0, 0, 0);
-  border-bottom: 2px solid lime;
+  border-bottom: 2px solid red;
   transition: 0.25s ease;
   background-color: rgba(0, 0, 0, 0);
+  padding-left: 4px;
 }
 .input_text:focus {
-  border: 2px solid lime;
+  border: 2px solid red;
   border-radius: 5px;
   outline: none;
 }
 
-.input_label {
-  color: white;
-}
-
 .button {
-  height: 30px;
-  width: 120px;
+  height: 34px;
+  width: 150px;
   background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  border: 2px solid red;
   transition: 0.25s;
   cursor: pointer;
-  color: red;
+  color: white;
   font-weight: bold;
+  user-select: none;
+  outline: 2px solid white;
+  outline-offset: -2px;
+  border: 2px solid white;
+  font-family: sans-serif;
 }
 .button:hover {
-  border: 2px solid black;
+  border: 2px solid white;
+  outline: 2px solid white;
+  outline-offset: -6px;
 }
