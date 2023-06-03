@@ -25,6 +25,7 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  transition: 0.25s;
 }
 .cages {
   width: 100%;
