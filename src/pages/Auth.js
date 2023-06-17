@@ -29,7 +29,7 @@ const Auth = () => {
         ></input>
         <input
           type="text"
-          defaultValue="pass1"
+          defaultValue="sus"
           ref={textPasswordRef}
           placeholder="password"
           className={s.input_text}
